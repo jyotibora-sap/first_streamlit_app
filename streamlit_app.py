@@ -44,8 +44,8 @@ my_data_row = my_cur.fetchone()
 
 streamlit.text("The fruit list contains: ")
 streamlit.text(my_data_row)
-fruit_choice2 = streamlit.text_input('What fruit would you like information about?','jackfruit')
-streamlit.write('The user entered ', fruit_choice2)
+fruit_to_add = streamlit.text_input('What fruit would you like to eat','jackfruit')
+streamlit.write('The user entered ', fruit_to_add)
 
 
 
