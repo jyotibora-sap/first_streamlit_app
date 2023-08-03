@@ -24,9 +24,9 @@ streamlit.text(fruityvice_response)
 
 streamlit.header("Fruityvice Fruit Advice!")
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
-fruit_choice2 = streamlit.text_input('What fruit would you like information about?','jackfruit')
+
 streamlit.write('The user entered ', fruit_choice)
-streamlit.write('The user entered ', fruit_choice2)
+
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
 
@@ -44,7 +44,8 @@ my_data_row = my_cur.fetchone()
 
 streamlit.text("The fruit list contains: ")
 streamlit.text(my_data_row)
-
+fruit_choice2 = streamlit.text_input('What fruit would you like information about?','jackfruit')
+streamlit.write('The user entered ', fruit_choice2)
 
 
 
