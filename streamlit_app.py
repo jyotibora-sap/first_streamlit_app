@@ -45,7 +45,9 @@ my_data_row = my_cur.fetchone()
 streamlit.text("The fruit list contains: ")
 streamlit.text(my_data_row)
 fruit_to_add = streamlit.text_input('What fruit would you like to eat','jackfruit')
-streamlit.write('The user entered ', fruit_to_add)
+streamlit.write('The fruit added ', fruit_to_add)
+
+my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('from Steamlit')")
 
 
 
